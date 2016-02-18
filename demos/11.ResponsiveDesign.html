@@ -5,24 +5,51 @@
 
 	<style>
 
-	.block
+	html,body
 	{
-		position: absolute;
-		height: 100px;
-		width: 30%;
-		background: red;
-		top: 400px;
+		margin: 0;
+		padding: 0;
 	}
 
+
+
+	.toolbar
+	{
+		width: 100%;
+		height: 56px;
+		background: #4285f4;
+		
+	}
+
+	.container
+	{
+		display: flex;
+		flex-direction : row;
+		flex-wrap: wrap;
+	}
+
+
+
+
+	.block
+	{
+		margin: 1%;
+		height: 200px;
+		width: 30%;
+		background: red;
+		color: white;
+		font-size: 25px;
+	}
 
 	@media (max-width: 768px)
 	{
 		.block
 		{
-
+			width: 100%;
+			margin-left: 0;
+			margin-right: 0;
 		}
 	}
-
 
 	</style>
 
@@ -32,7 +59,24 @@
 
 
 <div class="toolbar"></div>
-<div class="block"></div>
+
+<div class="container">
+	<div class="block">1</div>
+	<div class="block">2</div>
+	<div class="block">3</div>
+	<div class="block">4</div>
+	<div class="block">5</div>
+	<div class="block">6</div>
+	<div class="block">7</div>
+	<div class="block">8</div>
+	<div class="block">9</div>
+	<div class="block">10</div>
+	<div class="block">11</div>
+	<div class="block">12</div>
+	<div class="block">13</div>
+	<div class="block">14</div>
+	<div class="block">15</div>
+</div>
 
 </body>
 

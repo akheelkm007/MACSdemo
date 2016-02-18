@@ -51,6 +51,37 @@
 		font-size: 24px;
 	}
 
+	span
+	{
+		position: absolute;
+		margin-left: 16px;
+		left: 0;
+	}
+
+
+	.toast
+	{
+		position: fixed;
+		bottom: 32px;
+		left: 32px;
+		height: 28px;
+		background: black;
+		background: #323232;
+		color: white;
+		color: #f1f1f1;
+		border-radius: 3px;
+		font-family: sans-serif;
+		line-height: 28px;
+        padding: 16px 24px;
+		font-size: 14px;
+        box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+        transition: all 0.3s;
+	}
+
+	.move
+	{
+		transform : translateY(300px);
+	}
 
 
 	</style>
@@ -63,12 +94,16 @@
 
 <body>
 
-<div class="title">Live Editor</div>
+<div class="title"><span>By MACS</span> Live Editor</div>
 
 <div class="container">
 	<textarea class="ta" placeholder="Type Code Here"></textarea>
 	<div class="op"></div>	
 </div>
+
+
+<div class="toast">Created by Akheel , Asif , Vaisakhan</div>
+
 
 </body>
 
@@ -81,10 +116,12 @@ function $ (argument) {
 $('.ta').addEventListener('keyup' , function() {
 
 $('.op').innerHTML = $('.ta').value;
-
-
 });
 
+
+setInterval(function  () {
+	$('.toast').classList.toggle('move');
+},15000);
 
 	
 </script>
