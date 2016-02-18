@@ -11,6 +11,7 @@
 		height: 100px;
 		width: 100px;
 		background: red;
+		top: 400px;
 	}
 
 	</style>
@@ -19,10 +20,44 @@
 
 <body>
 <div class="block"></div>
+<button class="start">Start</button>
+<button class="pause">Pause</button>
 </body>
 
 <script>
+
+var elem = document.querySelector('.block');
+var start = document.querySelector('.start');
+var pause = document.querySelector('.pause');
+
+var duration = 3000;
+var initialPos = 0;
+var finalPos = 500;
+var paused = false;
+var currentPos = initialPos;
+var TimePerPixel = (finalPos - initialPos)/duration;
+
+function animate () {
+
+	if(currentPos > finalPos || paused)
+	return;	
+
+	elem.style.transform = "translate("+currentPos+"px)";
+	currentPos+=1;
+
+	setTimeout(animate,TimePerPixel);
+
+}
 	
+
+start.addEventListener('click' ,animate);
+
+pause.addEventListener('click' ,function () {
+	paused = true;
+});
+
+
+
 </script>
 
 
