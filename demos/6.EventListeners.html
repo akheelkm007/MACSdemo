@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+
+<img src="assets/1.jpg">
+
+</body>
+<script>
+
+var image = document.querySelector('img');
+
+
+image.addEventListener('click' , Rotate);
+image.addEventListener('mouseover' , Zoom);
+image.addEventListener('mouseout' , NoZoom);
+
+
+function NoZoom () {
+	image.style.transform = "scale(1)";
+}
+
+
+
+function Zoom () {
+	image.style.transform = "scale(2)";
+}
+
+
+function Rotate () {
+	image.style.transform = "scale(-1)";
+}
+
+
+
+// image.addEventListener('mouseout' ,function() {
+// 	image.style.transform = "scale(-1)";
+// });
+
+</script>
+
+</html>

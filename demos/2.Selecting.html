@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+
+<h1 class="heading" id="idee">Hello World</h1>
+
+<p class="para">Para</p>
+<p class="para">Para</p>
+<p class="para">Para</p>
+<p class="para">Para</p>
+<p class="para">Para</p>
+
+
+<button onclick="changeTitle()">Press Me !!!</button>
+<button onclick="changeColor()">Change Content !!!</button>
+
+</body>
+<script>
+
+var title = document.querySelector('h1');
+// var title = document.querySelector('.heading');
+// var title = document.querySelector('#idee');
+// var title = document.getElementsById('idee');
+
+
+
+var paras = document.querySelectorAll('p');
+// var paras = document.querySelectorAll('.para');
+// var paras = document.getElementsByClassName('para');
+// var paras = document.getElementsByTagName('p');
+
+function changeTitle () {
+
+	title.textContent = "Work Aaayi";
+}
+
+function changeColor (argument) {
+	
+	for (var i = 0; i < paras.length; i++) {
+		paras[i].textContent = "Content Edited";
+	};
+
+
+}
+
+</script>
+
+</html>

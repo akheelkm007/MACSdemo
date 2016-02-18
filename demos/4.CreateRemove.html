@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+
+<body>
+
+<h1 class="heading" id="idee">Hello World</h1>
+
+<p class="para">Para</p>
+<p class="para">Para</p>
+<p class="para">Para</p>
+<p class="para">Para</p>
+<p class="para">Para</p>
+
+
+<button onclick="changeTitle()">Create New Element</button>
+
+</body>
+<script>
+
+var title = document.querySelector('h1');
+
+var paras = document.querySelectorAll('p');
+
+function changeTitle () {
+
+	var x =document.createElement('p');
+	x.textContent = "Hello";
+	document.body.appendChild(x);
+}
+
+
+</script>
+
+</html>

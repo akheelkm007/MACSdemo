@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<style>
+
+	.block
+	{
+		position: absolute;
+		height: 100px;
+		width: 100px;
+		transition: all 1s ease-in-out;
+		background: red;
+	}
+
+	.bl
+	{
+		transition: all 0.3s ease-in-out;
+		background: blue;
+		top: 200px;
+	}
+
+	.bl:hover
+	{
+		transform: rotate(45deg);
+	}
+
+	.move
+	{
+		transform: translateX(500px);
+	}
+
+
+	</style>
+
+</head>
+
+<body>
+
+<div class="block"></div>
+
+<div class="block bl"></div>
+
+</body>
+<script>
+
+var elem = document.querySelector('.block');
+
+
+elem.addEventListener('click' , Move);
+
+
+function Move () {
+	elem.classList.toggle('move');
+	// elem.style.transform = "translateX(500px)";
+}
+
+
+</script>
+
+</html>
